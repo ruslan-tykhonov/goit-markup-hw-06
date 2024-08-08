@@ -107,7 +107,7 @@ header{
     letter-spacing: 0.02em;
     color: #434455;
 }
-contacts {
+.contacts {
     display: flex;
     gap: 40px;
 }
