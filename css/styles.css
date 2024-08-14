@@ -36,8 +36,10 @@ img{
 }
 
 /* Header */
-header{
+.header{
     border-bottom: 1px solid #e7e9fc;
+box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 .header .container {
     display: flex;
@@ -93,6 +95,7 @@ header{
 .menu-link {
     color: #2e2f42;
     padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu a:hover,
@@ -140,7 +143,6 @@ header{
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: #fff;
-    background-color: #2e2f42;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 48px;
@@ -162,6 +164,7 @@ header{
     border: none;
     border-radius: 4px;
     margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -186,6 +189,20 @@ header{
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+.svg-ftr{
+    display: flex;
+    width: 264px;
+    height: 112px;
+    border: 1px solid #8e8f99;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.svg-icons-ftr{
+  
 }
 .section-feature-list {
     display: flex;
@@ -216,10 +233,6 @@ header{
 
 .section-our-team {
     background-color: #f4f4fd;
-    align-items: center;
-    justify-items: center;
-    flex-direction: column;
-    gap: 32px;
     padding: 120px 0;
 }
 
@@ -227,12 +240,15 @@ header{
     background-color: #ffffff;
     max-width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .our-team-main-list{
     display: flex;
-    gap: 24px;
-    align-items: center;
-    justify-content: center;
+    gap: 24px; 
+}
+.team-photo {
+    max-width: 100%;
 }
 .team-container{
     padding: 32px 0;
@@ -266,6 +282,32 @@ header{
     color: #434455;
     text-align: center;
 }
+
+.svg-team-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding-top: 8px;
+}
+.svg-team-icon {
+    max-width: 232px;
+}
+.svg-team-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    fill: #f4f4fd;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.svg-team-link:hover,
+.svg-team-link:focus {
+    background-color: #404bbf;
+}
 /* End of section our team */
 
 /* Portfolio section */
@@ -296,10 +338,40 @@ header{
     gap: 24px;
     flex-wrap: wrap;
     row-gap: 48px;
+    cursor: pointer;
 }
 .portfolio-list-item {
-    background-color: #fff;
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.box{
+   position: relative;
+   overflow: hidden; 
+}
+.box-text-portfolio{
+padding: 40px 32px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: #4d5ae5;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-list-item:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-list-item:hover .box-text-portfolio {
+    transform: translateY(0);
 }
 .portfolio-container{
     padding: 32px 16px;
@@ -322,6 +394,14 @@ header{
     background-color: #2e2f42;
     padding: 100px 0;
 }
+.footer .container {
+    display: flex;
+    align-items: baseline;
+}
+.footer-container{
+margin-right: 120px;
+}
+
 .logo-footer {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -351,5 +431,35 @@ header{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    max-width: 264px;
+}
+.footer-sm{
+font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+.svg-list-ft{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+}
+.svg-link-ft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    width: 40px;
+    height: 40px;
+    fill: #f4f4fd;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.svg-link-ft:hover,
+.svg-link-ft:focus {
+    background-color: #31d0aa;
 }
 /* Footer end */
