@@ -132,7 +132,7 @@ button {
 .menu {
     align-items: center;
     gap: 40px;
-    display: flex;
+    display: none;
 }
 
 .menu-link {
