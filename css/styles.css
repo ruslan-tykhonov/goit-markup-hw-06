@@ -664,11 +664,20 @@ button {
     background-color: #2e2f42;
     padding: 96px 0;
 }
-.ft-cnt {
-        display: flex;
-        flex-direction: column;
-        gap: 72px;
-        align-items: center;
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    align-items: center;
+
+}
+
+.container-ft-cnt{
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    align-items: center;
 }
 
 .footer .logo-footer {
